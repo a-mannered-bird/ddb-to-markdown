@@ -1,0 +1,22 @@
+{
+  "name": "dndbeyond-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "creatures:post": "node creatures/post-creatures.mjs",
+    "creatures:build": "node creatures/build-docs.mjs",
+    "feats": "node feats/build-docs.mjs",
+    "items": "node items/build-docs.mjs",
+    "spells": "npm run spells:filter && npm run spells:build && npm run spells:scrolls",
+    "spells:build": "node spells/build-docs.mjs",
+    "spells:filter": "node spells/filter-spells.mjs",
+    "spells:scrolls": "node spells/build-scroll-tables.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.2.10",
+    "turndown": "^7.1.1"
+  }
+}
